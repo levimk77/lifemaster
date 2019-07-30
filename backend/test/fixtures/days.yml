@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  walk: 1
+  workout: 1
+  read: 1
+  podcast: 1
+  media: 1
+  fruit: 1
+  vegetable: 1
+  fish: 1
+  junk: 1
+
+two:
+  user_id: 1
+  walk: 1
+  workout: 1
+  read: 1
+  podcast: 1
+  media: 1
+  fruit: 1
+  vegetable: 1
+  fish: 1
+  junk: 1

@@ -1,0 +1,386 @@
+iframe {
+    display: block;
+    height: 90%;
+    width: 95%;
+    position: relative;
+    left: 2%;
+
+}
+
+#next {
+    position: relative;
+    left: 40%;
+    background-color: #CFE8EF ; 
+    margin-top: 10px;
+    padding: 8px;
+    font-size: 20px;
+    font-family: 'Russo One', sans-serif;
+    color: #4F6D7A;
+ 
+}
+
+h1 {
+    position: relative;
+    left: 27%;
+    font-size: 7.5em;
+    color: #FBFCFF;
+    background-color: #1C6E8C;
+    width: 680px;
+    text-align: center;
+    border: 5px;
+    border-style: solid;
+    border-color: #C5C5C5;
+    font-family: 'Russo One', sans-serif;
+    
+
+}
+
+#loginh3{
+    position: relative;
+    left: 5%;
+    font-size: 3em;
+    color: #FBFCFF;
+    font-family: 'Cinzel', serif;
+
+}
+
+#loginform {
+    position: relative;
+    left: 22%;
+    top: 90px;
+    font-size: 2em;
+    font-family: 'Russo One', sans-serif;
+    color: #FBFCFF;
+    background-color:  #1C6E8C;
+    width: 900px;
+    align-content: center;
+    padding: 8.5px;
+    border: 5px;
+    border-style: solid;
+    border-color: #C5C5C5;
+}
+
+#loginbutton {
+    background-color: #CFE8EF ; 
+    padding: 8px;
+    font-size: 20px;
+    font-family: 'Russo One', sans-serif;
+    color: #4F6D7A
+ 
+}
+
+.login-input{
+    height: 25px;
+    font-size: 0.5em;
+    width: 200px;
+}
+
+.top-menu{
+    position: relative;
+    left: 30%;
+    background-color: #3BD8FF ; 
+    padding: 24px;
+    font-size: 30px;
+    border-radius: 50%;
+    font-family: 'Asap', sans-serif;
+    
+}
+
+
+
+body {
+    background-color: #7EA8BE;
+}
+
+#add-goal-btn {
+    position: relative;
+    left: 42.5%;
+    top: 50px;
+    background-color: #3BD8FF ; 
+    padding: 16px;
+    font-size: 20px;
+    border-radius: 50%;
+    font-family: 'Asap', sans-serif;
+}
+
+#add-journal-btn {
+    position: relative;
+    left: 41.5%;
+    top: 50px;
+    background-color: #3BD8FF ; 
+    padding: 16px;
+    font-size: 20px;
+    border-radius: 50%;
+    font-family: 'Asap', sans-serif;
+}
+
+#add-sage-advice-btn {
+    position: relative;
+    left: 42.5%;
+    top: 50px;
+    background-color: #3BD8FF ; 
+    padding: 16px;
+    font-size: 20px;
+    border-radius: 50%;
+    font-family: 'Asap', sans-serif;
+}
+
+#average-bar {
+    font-size: 2em;
+    position: relative;
+    left: 10%;
+    align-content: center;
+}
+
+.new-goal-form{
+    position: relative;
+    left: 25%;
+    top: 60px;
+
+    padding: 12px;
+    font-size: 20px;
+    margin-top: 16px;
+
+   
+    font-size: 2em;
+    font-family: 'Russo One', sans-serif;
+    color: #FBFCFF;
+    background-color:  #1C6E8C;
+    width: 665px;
+    align-content: center;
+    border: 5px;
+    border-style: solid;
+    border-color: #C5C5C5;
+
+}
+
+.new-sub-goal-form{
+    
+    padding: 8px;
+    font-size: 16px;
+    font-family: 'Russo One', sans-serif;
+    color: #FBFCFF;
+    background-color:  #1C6E8C;
+    width: 500px;
+    align-content: center;
+    padding: 7.5px;
+   
+
+}
+
+.submit-goal-btn {
+    background-color: #CFE8EF ; 
+    padding: 6px;
+    font-size: 12px;
+    font-family: 'Russo One', sans-serif;
+    color: #4F6D7A;
+    position: relative;
+    bottom: 5px;
+}
+ 
+.sub-submit-goal-form-btn {
+    background-color: #CFE8EF ; 
+    padding: 4px;
+    font-size: 8px;
+    font-family: 'Russo One', sans-serif;
+    color: #4F6D7A
+}
+
+#top-add-goal-input {
+    height: 25px;
+    width: 300px;
+    position: relative;
+    bottom: 5px;
+}
+
+.add-sub-event {
+    background-color: #CFE8EF ; 
+    padding: 4px;
+    font-size: 8px;
+    font-family: 'Russo One', sans-serif;
+    color: #4F6D7A
+}
+
+.toggle-complete {
+    background-color: #CFE8EF ; 
+    padding: 4px;
+    font-size: 8px;
+    font-family: 'Russo One', sans-serif;
+    color: #4F6D7A
+
+}
+
+.delete-button {
+    background-color: #CFE8EF ; 
+    padding: 4px;
+    font-size: 8px;
+    font-family: 'Russo One', sans-serif;
+    color: #4F6D7A
+
+}
+
+
+.top-div {
+    position: relative;
+    left: 28%;
+    top: 70px;
+    
+    color: #FBFCFF;
+    background-color:  #1C6E8C;
+    width: fit-content;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    margin: 6px;
+    padding: 5px;
+    min-width: 620px;
+}
+
+.sub-goal-list {
+    width: fit-content;
+    margin-top: 5px;
+}
+
+#average-bar {
+    position: relative;
+    top: 55px;
+    left: 2%;
+    width: 1350px;
+    font-size: 30px;   
+    text-align: center; 
+}
+
+#new-journal-form {
+    position: relative;
+    left: 32%;
+    top: 70px;
+    font-size: 32px;
+    font-family: 'Russo One', sans-serif;
+    color: #FBFCFF;
+    background-color:  #1C6E8C;
+    width: 550px;
+
+    border: 5px;
+    border-style: solid;
+    border-color: #C5C5C5;
+    height: 500px;
+    text-align: left;
+    padding-left: 16px;
+
+
+}
+
+#new-journal-submit {
+    background-color: #CFE8EF ; 
+    padding: 6px;
+    font-size: 24px;
+    font-family: 'Russo One', sans-serif;
+    color: #4F6D7A;
+    position: relative;
+    bottom: 5px;
+    top: 15px;
+}
+
+.journal-card {
+    position: relative;
+    left: 24%;
+    top: 70px;
+    font-size: 32px;
+    font-family: 'Russo One', sans-serif;
+    color: #FBFCFF;
+    background-color:  #1C6E8C;
+    width: 750px;
+    border: 5px;
+    border-style: solid;
+    border-color: #C5C5C5;
+    height: 450px;
+    line-height: 1.2;
+    margin-top: 20px;
+    
+}
+
+li {
+    list-style: none;
+}
+
+.journal-delete-button {
+    background-color: #CFE8EF ; 
+    padding: 6px;
+    font-size: 20px;
+    font-family: 'Russo One', sans-serif;
+    color: #4F6D7A;
+    position: relative;
+    top: 10px;
+}
+
+#add-sage-advice-form {
+    position: relative;
+    left: 32%;
+    top: 70px;
+    font-size: 32px;
+    font-family: 'Russo One', sans-serif;
+    color: #FBFCFF;
+    background-color:  #1C6E8C;
+    width: 550px;
+    border: 5px;
+    border-style: solid;
+    border-color: #C5C5C5;
+    height: 280px;
+    text-align: left;
+    padding-left: 16px;
+
+
+}
+
+#content-label{
+    position: relative;
+    bottom: 118px;
+}
+
+#title-input{
+    position: relative;
+    bottom: 4px;
+    width: 428px;
+}
+
+#new-sage-advice-submit{
+    background-color: #CFE8EF ; 
+    padding: 6px;
+    font-size: 20px;
+    font-family: 'Russo One', sans-serif;
+    color: #4F6D7A;
+    position: relative;
+    left: 35%
+
+}
+
+.sage-advice-card {
+    position: relative;
+    left: 24%;
+    top: 70px;
+    font-size: 16px;
+    font-family: 'Russo One', sans-serif;
+    color: #FBFCFF;
+    background-color:  #1C6E8C;
+    width: 750px;
+    border: 5px;
+    border-style: solid;
+    border-color: #C5C5C5;
+    margin-top: 20px;
+    padding-left: 8px;
+}
+
+.sage-advice-head {
+    font-size: 32px;
+    margin: 0px;
+}
+
+.sage-delete-button {
+    background-color: #CFE8EF ; 
+    padding: 4  px;
+    font-size: 6px;
+    font-family: 'Russo One', sans-serif;
+    color: #4F6D7A;
+    position: relative;
+    bottom: 5px;
+}
