@@ -1,9 +1,9 @@
 iframe {
     display: block;
     height: 90%;
-    width: 95%;
+    width: 65%;
     position: relative;
-    left: 2%;
+    left: 17%;
 
 }
 
@@ -19,6 +19,10 @@ iframe {
  
 }
 
+.true {
+    color: #706b69;
+
+}
 h1 {
     position: relative;
     left: 27%;
@@ -46,7 +50,7 @@ h1 {
 
 #loginform {
     position: relative;
-    left: 22%;
+    left: 19%;
     top: 90px;
     font-size: 2em;
     font-family: 'Russo One', sans-serif;

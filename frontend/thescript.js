@@ -1,16 +1,16 @@
 document.addEventListener(`DOMContentLoaded`,func=>{
     main = document.querySelector(`main`)
-    localStorage.setItem("user_id", 21)
-    displayHomePage()
-    goalbtn = document.getElementById(`goal-btn`)
-    goalbtn.addEventListener(`click`, loadEvents)
+    // localStorage.setItem("user_id", 21)
+    // displayHomePage()
+    // goalbtn = document.getElementById(`goal-btn`)
+    // goalbtn.addEventListener(`click`, loadEvents)
 
-    journalbtn = document.getElementById(`journal-btn`)
-    journalbtn.addEventListener(`click`, loadJournal)
+    // journalbtn = document.getElementById(`journal-btn`)
+    // journalbtn.addEventListener(`click`, loadJournal)
 
-    sageadvicebtn = document.getElementById(`sage-advice-button`)
-    sageadvicebtn.addEventListener(`click`, loadsageAdvice)
-    // displayIntroductionPage()
+    // sageadvicebtn = document.getElementById(`sage-advice-button`)
+    // sageadvicebtn.addEventListener(`click`, loadsageAdvice)
+    displayIntroductionPage()
 })
 function loadsageAdvice(){
     var old_element = document.querySelector(`main`);
@@ -163,9 +163,9 @@ fetch(`http://localhost:3000/user_journal/${localStorage.user_id}`).then(resp =>
             fooddata2 += data.fruit
             fooddata2 += data.vegetable
             fooddata2 += data.fish
-            let fooddata3 = fooddata2 / fooddata
+            let fooddata3 = (fooddata2 / fooddata)*100
             if (Number.isNaN(fooddata3)) {fooddata3 = 0}
-            h1.innerHTML = `Daily Averages <br> walking: ${data.walk}m, exercise: ${data.workout}m, reading: ${data.read}m, podcasts: ${data.podcast}m, media: ${data.media}m. Diet: ${fooddata3.toFixed(2)}%`
+            h1.innerHTML = `Daily Averages <br> walking: ${data.walk.toFixed(0)}m, exercise: ${data.workout.toFixed(0)}m, reading: ${data.read.toFixed(0)}m, podcasts: ${data.podcast.toFixed(0)}m, media: ${data.media.toFixed(0)}m. Diet: ${fooddata3.toFixed(0)}%`
             h1.id = `average-bar`
             insertAfter(h1, addbtn)
     })
@@ -201,7 +201,7 @@ fetch(`http://localhost:3000/user_journal/${localStorage.user_id}`).then(resp =>
                         fruit: event.target.fruit.value,
                         vegetable: event.target.vegetable.value,
                         fish: event.target.fish.value,
-                        junk: event.target.vegetable.value
+                        junk: event.target.junk.value
                     })
                 }).then(resp => resp.json()).then(dati => {
                
@@ -255,7 +255,7 @@ fetch(`http://localhost:3000/user_journal/${localStorage.user_id}`).then(resp =>
                         fooddata2 += data.fish
                         let fooddata3 = fooddata2 / fooddata
                         if (Number.isNaN(fooddata3)) {fooddata3 = 0}
-                        h1.innerHTML = `Daily Averages <br> walking: ${data.walk}m, exercise: ${data.workout}m, reading: ${data.read}m, podcasts: ${data.podcast}m, media: ${data.media}m. Diet: ${fooddata3.toFixed(2)}%`
+                        h1.innerHTML = `Daily Averages <br> walking: ${data.walk.toFixed(0)}m, exercise: ${data.workout.toFixed(0)}m, reading: ${data.read.toFixed(0)}m, podcasts: ${data.podcast.toFixed(0)}m, media: ${data.media.toFixed(0)}m. Diet: ${fooddata3.toFixed(0)}%`
                        
                     })
                     })
@@ -491,7 +491,8 @@ function loadEvents(){
                                         }
                                     }
                                     if (newSubGoalForm !== null) { newSubGoalForm.remove() }
-                                    event.target.remove()
+                                    if (event.target.parentElement.className === `top-div`) {event.target.parentElement.remove()}
+                                    else {event.target.remove()}
                                 })
                 }
         })
@@ -509,7 +510,7 @@ function loadEvents(){
                 }).then(resp => resp.json()).then(data => {
                     div = document.createElement(`div`)
                     div.className = 'top-div'
-                    div.innerHTML += `<li class=${data.completion_status} data-id='${data.id}'>${data.description}</li><button data-id='${data.id}' class='add-sub-event'>+</button><button data-id='${data.id}' class='toggle-complete'>Y</button><button data-id='${data.id}' class='delete-button'>Delete</button>`
+                    div.innerHTML += `<li class=${data.completion_status} data-id='${data.id}'>${data.description}</li><button data-id='${data.id}' class='add-sub-event'>add subgoal</button><button data-id='${data.id}' class='toggle-complete'>toggle complete</button><button data-id='${data.id}' class='delete-button'>Delete</button>`
                     main.appendChild(div)
                 })
             }
@@ -647,7 +648,7 @@ function displayIntroductionPage() {
     let mainContainer = document.querySelector('main')
     mainContainer.innerHTML = `
     <iframe width="420" height="315"
-    src="https://www.youtube.com/embed/tgbNymZ7vqY">
+    src="/Users/TheLeviathan/Desktop/lifemaster/vid/thevid.mp4">
     </iframe>
     <button id="next">Click Here to use LifeMaster free!</button>`
     document.getElementById(`next`).addEventListener(`click`, displayLogin)

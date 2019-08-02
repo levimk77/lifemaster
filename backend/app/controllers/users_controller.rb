@@ -33,6 +33,7 @@ end
   def user_averages
     user = User.find_by(params[:id])
     user_days = user.days
+    user_averages_hash = Hash.new(0)
     user_averages = Day.new()
     user_days.each do |day|
       user_averages.walk += day.walk
@@ -47,18 +48,18 @@ end
     end
 
     if (user_days.length != 0)
-    user_averages.walk = user_averages.walk/user_days.length
-    user_averages.workout = user_averages.workout/user_days.length
-    user_averages.read = user_averages.read/user_days.length
-    user_averages.podcast = user_averages.podcast/user_days.length
-    user_averages.media = user_averages.media/user_days.length
-    user_averages.fruit = user_averages.fruit/user_days.length
-    user_averages.vegetable = user_averages.vegetable/user_days.length
-    user_averages.fish = user_averages.fish/user_days.length
-    user_averages.junk = user_averages.junk/user_days.length
+    user_averages_hash[:walk] = user_averages.walk.to_f/user_days.length
+    user_averages_hash[:workout] = user_averages.workout.to_f/user_days.length
+    user_averages_hash[:read] = user_averages.read.to_f/user_days.length
+    user_averages_hash[:podcast] = user_averages.podcast.to_f/user_days.length
+    user_averages_hash[:media] = user_averages.media.to_f/user_days.length
+    user_averages_hash[:fruit] = user_averages.fruit.to_f/user_days.length
+    user_averages_hash[:vegetable] = user_averages.vegetable.to_f/user_days.length
+    user_averages_hash[:fish] = user_averages.fish.to_f/user_days.length
+    user_averages_hash[:junk] = user_averages.junk.to_f/user_days.length
     end
 
-    render :json => user_averages
+    render :json => user_averages_hash
 
 
 
